@@ -1,10 +1,16 @@
 import type { NextPage } from "next"
 import React from "react"
-import WatermarkInterface from './interfaces/main'
 import Watermark from "watermark-image"
 import "./styles.css"
 
-
+interface WatermarkInterface {
+  text: string
+  hex: string
+  fontSize: number
+  watermarkHeight: number
+  watermarkWidth: number
+  rgb: any
+}
 
 const Home: NextPage<WatermarkInterface> = () => {
   const inputFileRef = React.useRef<HTMLInputElement | null>(null)
